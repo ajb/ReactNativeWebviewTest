@@ -18,6 +18,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeWebviewTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeWebviewTestTests.m */; };
 		34648178F54878D39107CCD1 /* libPods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 811CD71435DEF41436817FEF /* libPods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.a */; };
+		763D3EC224A85397009A76D5 /* EmptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763D3EC124A85397009A76D5 /* EmptyFile.swift */; };
 		9E6206D8E725E435D7B45760 /* libPods-ReactNativeWebviewTest-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7D9827854DDF0B19353BCE /* libPods-ReactNativeWebviewTest-tvOSTests.a */; };
 		FE8756206E6584F4E01F8719 /* libPods-ReactNativeWebviewTest-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 182E86950222D7527EA7804E /* libPods-ReactNativeWebviewTest-tvOS.a */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,8 @@
 		4E2BD5A8C0ABBC06471CC920 /* Pods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeWebviewTest-ReactNativeWebviewTestTests/Pods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5516A74550B47FEE0FDE1664 /* Pods-ReactNativeWebviewTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeWebviewTest.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeWebviewTest/Pods-ReactNativeWebviewTest.debug.xcconfig"; sourceTree = "<group>"; };
 		69BA41BDC18954D2E54DE7C9 /* libPods-ReactNativeWebviewTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeWebviewTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		763D3EC024A85397009A76D5 /* ReactNativeWebviewTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeWebviewTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		763D3EC124A85397009A76D5 /* EmptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFile.swift; sourceTree = "<group>"; };
 		811CD71435DEF41436817FEF /* libPods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9BDFC6C747AA6BD962BD898 /* Pods-ReactNativeWebviewTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeWebviewTest.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeWebviewTest/Pods-ReactNativeWebviewTest.release.xcconfig"; sourceTree = "<group>"; };
 		EA7D9827854DDF0B19353BCE /* libPods-ReactNativeWebviewTest-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeWebviewTest-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,12 +162,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				763D3EC124A85397009A76D5 /* EmptyFile.swift */,
 				13B07FAE1A68108700A75B9A /* ReactNativeWebviewTest */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ReactNativeWebviewTestTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				EF510B2C80479314754EA926 /* Pods */,
+				763D3EC024A85397009A76D5 /* ReactNativeWebviewTest-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -292,7 +297,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = RLRSGUR3TK;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1150;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -530,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				763D3EC224A85397009A76D5 /* EmptyFile.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -584,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E2BD5A8C0ABBC06471CC920 /* Pods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -607,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26868918ACAD96F06B3AA1A4 /* Pods-ReactNativeWebviewTest-ReactNativeWebviewTestTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = ReactNativeWebviewTestTests/Info.plist;
@@ -646,6 +654,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.5vforest.reactnativewebview;
 				PRODUCT_NAME = ReactNativeWebviewTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeWebviewTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -670,6 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.5vforest.reactnativewebview;
 				PRODUCT_NAME = ReactNativeWebviewTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeWebviewTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
