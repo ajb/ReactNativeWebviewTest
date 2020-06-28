@@ -29,8 +29,11 @@ export default function App() {
 
   function connect() {
     if (connected) return;
-    sendCallback('onConnecting')
-    setTimeout(stopScanning, 5000)
+    callWebviewCallback('onConnecting')
+    setTimeout(() => {
+      callWebviewCallback('onErrorConnecting')
+      stopScanning()
+    }, 5000)
 
     manager.startDeviceScan(null, null, (error, device) => {
       if (error) {
@@ -46,14 +49,15 @@ export default function App() {
         }).then((device) => {
           setConnected(true)
           setConnectedDevice(device)
-          sendCallback('onSuccess')
+          callWebviewCallback('onConnected')
 
           device.onDisconnected(() => {
-            sendCallback('onDisconnect')
+            callWebviewCallback('onDisconnected')
             setConnected(false)
             setConnectedDevice(null)
           })
         }).catch((error) => {
+          callWebviewCallback('onErrorConnecting')
           console.log('Error: ', error.message)
         })
        }
@@ -65,7 +69,7 @@ export default function App() {
     connectedDevice.cancelConnection()
     setConnected(false)
     setConnectedDevice(null)
-    sendCallback('onDisconnect')
+    callWebviewCallback('onDisconnected')
   }
 
   function write(str) {
@@ -77,7 +81,7 @@ export default function App() {
     )
   }
 
-  function sendCallback(cbName) {
+  function callWebviewCallback(cbName) {
     webviewRef.current.injectJavaScript("window.ReactNativeBTCallbacks && window.ReactNativeBTCallbacks['" + cbName + "']()")
   }
 
